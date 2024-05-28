@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T21:23:16.840467" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Python\SeatbeltProject\Test\Test.robot">
+<test id="s1-t1" name="Test Seatbelt Alerts" line="7">
+<kw name="Unfasten Seatbelt" owner="Test_seatbelt">
+<status status="PASS" start="2024-05-28T21:23:16.936494" elapsed="0.001019"/>
+</kw>
+<kw name="Is Light Indicator Red" owner="Test_seatbelt">
+<msg time="2024-05-28T21:23:16.937513" level="INFO">${light_red} = True</msg>
+<var>${light_red}</var>
+<status status="PASS" start="2024-05-28T21:23:16.937513" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Test_seatbelt">
+<msg time="2024-05-28T21:23:16.938511" level="INFO">${sound_on} = True</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-05-28T21:23:16.938511" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_red}</arg>
+<arg>The warning light should flash red when the belt is unfastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.938511" elapsed="0.001004"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_on}</arg>
+<arg>The audible alarm must be activated when the belt is unfastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.939599" elapsed="0.000000"/>
+</kw>
+<kw name="Fasten Seatbelt" owner="Test_seatbelt">
+<status status="PASS" start="2024-05-28T21:23:16.939599" elapsed="0.001089"/>
+</kw>
+<kw name="Is Light Indicator Green" owner="Test_seatbelt">
+<msg time="2024-05-28T21:23:16.940688" level="INFO">${light_green} = True</msg>
+<var>${light_green}</var>
+<status status="PASS" start="2024-05-28T21:23:16.940688" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Test_seatbelt">
+<msg time="2024-05-28T21:23:16.940688" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-05-28T21:23:16.940688" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-28T21:23:16.941664" level="INFO">${light_off} = True == True</msg>
+<var>${light_off}</var>
+<arg>${light_green} == True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.941664" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-28T21:23:16.942646" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.942646" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_off}</arg>
+<arg>The warning light should be green when the belt is fastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.942646" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm must be deactivated when the belt is fastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.943695" elapsed="0.000000"/>
+</kw>
+<doc>Check that light and sound alerts function correctly when the seatbelt is unfastened and fastened.</doc>
+<status status="PASS" start="2024-05-28T21:23:16.934455" elapsed="0.010312"/>
+</test>
+<doc>Test the selected component</doc>
+<status status="PASS" start="2024-05-28T21:23:16.842377" elapsed="0.103388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-28T21:23:16.932396" level="WARN">Imported library 'C:\Python\SeatbeltProject\Test\Seatbelt_GUI.py' contains no keywords.</msg>
+</errors>
+</robot>
